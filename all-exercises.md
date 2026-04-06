@@ -17,7 +17,7 @@
 
 ### The setup
 
-Maya has 3 days to turn her chaotic meeting notes into a PRD that Priya (Eng) and Cam (Design) can actually use. Her notes are honest, messy, and full of useful signal — but they're not a PRD.
+Maya has 1 day to turn her chaotic meeting notes into a PRD that Priya (Eng) and Cam (Design) can actually use. Her notes are honest, messy, and full of useful signal — but they're not a PRD.
 
 Your job: use Claude to get from notes to structured first draft. Then improve it.
 
@@ -84,7 +84,7 @@ When Claude gives you a draft, pick the weakest section and follow up:
 ## Exercise 2 — Interview transcript → evidence-backed insight memo
 **Time:** 15 minutes  
 **What you build:** A structured insight memo with themes, evidence, and recommended actions  
-**Files you need:** `customer-interview-transcript.md`, `support-tickets-sample.md`
+**Files you need:** `customer-interview-transcript.md`, `terracart-support-tickets-sample.md`
 
 ---
 
@@ -150,7 +150,7 @@ When you have the output, follow up with:
 
 Maya has her insight memo from Exercise 2. Now she has to say the same thing three different ways:
 
-- **Friday leadership review** — VP and CEO, 5 minutes of attention, they care about money and timeline
+- **Friday leadership review** — VPs and CEO, 5 minutes of attention, they care about money and timeline
 - **Engineering kick-off** — Priya's team, they need scope, ambiguity, and open questions
 - **Team Slack** — The broader product team, casual update, no jargon, keep it moving
 
@@ -163,7 +163,7 @@ You are a product manager preparing a 5-bullet executive summary for a Friday le
 
 The audience: VP of Product and CEO. They care about: revenue impact, timeline, and risk. They do not want to read a PRD. They have 3 minutes.
 
-Source: [PASTE your insight memo from Exercise 2 OR paste the discovery narrative from 01-discovery-narrative/discovery-story.md]
+Source: [PASTE your insight memo from Exercise 2] 
 
 Format: 5 bullets maximum. Start with the business impact. End with the ask (what you need from them). Bullets should be complete sentences but punchy — no longer than 20 words each. No jargon.
 ```
@@ -303,7 +303,7 @@ The context folder you built today works for your real job. File your next inter
 
 ### The setup
 
-Maya's PRD draft (see `weak-prd-draft.md`) is... not great. She knows it. But she's too close to it to see all the gaps. She needs cross-functional review — and she needs it before the Thursday deadline, not after.
+Maya's PRD draft (see `weak-prd-draft.md`) is... not great. She knows it. But she's too close to it to see all the gaps. She needs cross-functional review — and she needs it before the deadline, not after.
 
 Claude can simulate cross-functional review. It's not the same as real feedback. But it catches the obvious gaps before you put the doc in front of real people.
 
@@ -378,9 +378,9 @@ Every exercise followed the same pattern:
 
 **Messy input → structured context → draft artifact → review loop → audience-specific output**
 
-That pattern is not a Claude trick. It's how good PM writing works. Claude just makes it faster — when you give it the right system to work within.
+That pattern is not a Claude trick. It's how PMs leverage AI to write better and ship faster. Claude makes it faster when you give it the right system to work within.
 
-The PMs who get the most out of AI are not the ones with the cleverest prompts. They're the ones who have invested in their context, their templates, and their standards. The model does the drafting. The PM does the thinking.
+The PMs who get the most out of AI are not the ones with the cleverest prompts. They're the ones who have engineered their context. Treat it like a product and work on their templates and their standards. The model does the drafting. The PM does the thinking.
 
 ---
 
