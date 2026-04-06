@@ -17,7 +17,7 @@
 
 ### The setup
 
-Maya has 36 hours to turn her chaotic meeting notes into a PRD that Priya (Eng) and Cam (Design) can actually use. Her notes are honest, messy, and full of useful signal — but they're not a PRD.
+Maya has 3 days to turn her chaotic meeting notes into a PRD that Priya (Eng) and Cam (Design) can actually use. Her notes are honest, messy, and full of useful signal — but they're not a PRD.
 
 Your job: use Claude to get from notes to structured first draft. Then improve it.
 
