@@ -2,7 +2,7 @@
 ### *The Checkout Abandonment Mystery — AI PM Workshop*
 
 **Format:** Hands-on build-along  
-**Length:** 90 minutes (can compress to 75 or expand to 120)  
+**Length:** 90 minutes  
 **Audience:** Working PMs — associate through senior  
 **Vibe:** Product seminar, not lecture. Quirky professor energy. You're building in public.
 
@@ -37,9 +37,9 @@ Say this. Write it on the board. Come back to it.
 
 Tell it like a detective story:
 
-> "It's a Tuesday morning. Maya is doing her weekly ritual — staring at the funnel dashboard over coffee. She's seen these numbers a hundred times. Then she hits the last line of the checkout funnel. 32%. She blinks. She refreshes. Still 32%."
+> "It's a Monday morning. Maya is doing her weekly ritual — staring at the funnel dashboard over coffee. She's seen these numbers a hundred times. Then she hits the last line of the checkout funnel. 32%. She blinks. She refreshes. Still 32%."
 
-Walk through the discovery narrative (see `01-discovery-narrative/discovery-story.md`). Hit these beats:
+Walk through the discovery narrative (see `discovery-story.md`). Hit these beats:
 - The anomaly in the aggregate data
 - The step-level breakdown (the 40% drop at payment step)
 - The session recordings (the painful mobile keyboard moment)
@@ -48,7 +48,7 @@ Walk through the discovery narrative (see `01-discovery-narrative/discovery-stor
 
 **End the story with the PM's actual problem:**
 
-> "Maya has 36 hours. She needs a PRD for engineering by Thursday, an exec summary for Friday leadership review, and an engineering scope breakdown by Monday. She has messy notes, five interview transcripts, 20 support tickets, and a weak first draft of a PRD that she wrote at 11pm and she knows is bad."
+> "Maya has 4 days to kick off a project to address the gap. She needs a PRD for engineering by Wednesday, an exec summary for Thursday leadership review, and an engineering scope breakdown by Friday. She has messy notes, five interview transcripts, 20 support tickets, and a weak first draft of a PRD that she wrote at 11pm and she knows is bad."
 
 > "We're going to help her. In real time. Using AI."
 
