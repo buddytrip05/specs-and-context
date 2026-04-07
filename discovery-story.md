@@ -29,7 +29,7 @@ She pulls up the dashboard on Monday and stares at 32% with new eyes. Not just "
 
 She doesn't know the answer. And the dashboard can't tell her — it has no benchmark, no industry comparison, no red line. It just shows the number.
 
-She opens a new tab and spends twenty minutes reading a competitive market analysis report she make in Perplexity about e-commerce checkout conversion benchmarks.  
+She opens a new tab and spends twenty minutes reading a competitive market analysis report she made in Perplexity about e-commerce checkout conversion benchmarks.  
 
 The range she finds: 45–58%. Her number is 32%.
 
