@@ -25,7 +25,7 @@ Last week, she was at an industry meetup. Talking to a PM at a comparable B2C br
 
 Maya smiled and moved on. But the number stuck.
 
-She pulls up the dashboard on Monday and stares at 32% with new eyes. Not "this is our number." For the first time: "Is our number okay?"
+She pulls up the dashboard on Monday and stares at 32% with new eyes. Not just "this is our number" but for the first time **"Is our number okay?"**
 
 She doesn't know the answer. And the dashboard can't tell her — it has no benchmark, no industry comparison, no red line. It just shows the number.
 
