@@ -5,7 +5,7 @@
 
 ## The company
 
-**Terracart** is a mid-market e-commerce platform for specialty outdoor goods - think like the Target version of REI — camping gear, hiking apparel, gardening tools. Founded in 2019. About 280 employees. Growing but burning cash. The board just asked the CEO a pointed question about unit economics.
+**Terracart** is a mid-market e-commerce platform for specialty outdoor goods - think like the Target version of REI — camping gear, hiking apparel, gardening tools. Founded in 2019. About 280 employees. Growing but burning cash. The board just asked the CEO a pointed question about cash and runrates.
 
 The product team is a team of six: one CPO, one senior PM, two associate PMs, a senior designer, and a user research analyst. Everyone is stretched thin. Everyone has opinions.
 
