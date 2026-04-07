@@ -1,7 +1,7 @@
 # [RAW INPUT — DO NOT EDIT]
 # Terracart cross-functional checkout meeting
 # Notes taken by: Maya Okonkwo (PM)
-# Date: Tuesday, Week 3
+# Date: Tuesday 
 # Attendees: Maya (PM), Priya (Eng lead), Cam (Design), Darius (Analytics), Lena (Support)
 
 ---
