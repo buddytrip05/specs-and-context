@@ -11,7 +11,7 @@ The product team is a team of six: one CPO, one senior PM, two associate PMs, a 
 
 ---
 
-## Week 1: The anomaly in the dashboard
+## Monday morning: The anomaly in the dashboard
 
 Maya's Monday morning ritual is fifteen minutes with coffee and the growth dashboard. She's done it every week for two years. The dashboard shows the same six numbers it always shows: sessions, product page views, cart adds, checkout starts, purchases, revenue. 
 
@@ -25,25 +25,27 @@ Last week, she was at an industry meetup. Talking to a PM at a comparable B2C br
 
 Maya smiled and moved on. But the number stuck.
 
-She pulls up the dashboard on Monday and stares at 32% with new eyes. Not "this is our number." For the first time: "Is this number okay?"
+She pulls up the dashboard on Monday and stares at 32% with new eyes. Not "this is our number." For the first time: "Is our number okay?"
 
 She doesn't know the answer. And the dashboard can't tell her — it has no benchmark, no industry comparison, no red line. It just shows the number.
 
-She opens a new tab and spends twenty minutes reading about e-commerce checkout conversion benchmarks. Specialty retail, outdoor goods, mid-market. 
+She opens a new tab and spends twenty minutes reading a competitive market analysis report she make in Perplexity about e-commerce checkout conversion benchmarks.  
 
-The range she finds: 45–58%. The number she has: 32%.
-
-She refreshes her dashboard. Still 32%.
+The range she finds: 45–58%. Her number is 32%.
 
 Now she wants to understand where the 32% is coming from. But here's the thing — the dashboard doesn't break down the checkout funnel by step. It shows checkout starts and purchases. The middle is a black box. She has always assumed the drop-off was distributed, a little friction everywhere. She has never actually looked.
+
 She Slacks her user research analyst: "Hey, can you please pull the checkout funnel for me broken down by step. Like each individual step — shipping, payment, review."
-Darius responds twenty minutes later: "Yeah I can get that. It's not in the standard dashboard — I have to pull it manually from the tables themselves. Give me an hour."
-This is the moment. The step-level data has existed in the analytics platform the entire time. Darius has access to it. It has just never been configured into the standard weekly report, never been asked for, never been looked at. For too long the checkout experience has been bleeding users at the payment step and nobody has seen it because nobody has looked at the right level of the data.
+
+Darius responds twenty minutes later: "Yeah I can get that. It's not in the standard dashboard — I have to pull it manually from the tables themselves and build a new dash. Give me an hour."
+
+This is the moment. The step-level data has existed in the analytics platform the entire time. Darius has access to it. It has just never been configured into a standard report, never been asked for, never been looked at. For too long the checkout experience has been bleeding users at the payment step and nobody has seen it because nobody has looked at the right level of the data.
+
 The data wasn't missing. The context was missing. A benchmark from a casual conversation at a meetup is what finally provided it.
 
 ---
 
-## Week 1: The funnel data arrives
+## Monday Lunchtime 1: The funnel data arrives
 
 The analyst sends back a spreadsheet. Here's what it shows:
 
@@ -55,15 +57,15 @@ The analyst sends back a spreadsheet. Here's what it shows:
 | Order review | 9,100 | 8,650 | 5% |
 | Confirmation | 8,650 | 5,888 | **32%** |
 
-The bleeding is happening in two places: the payment info step (40% drop) and between order review and confirmation (32% drop). But nobody had been looking at step-level data — only the overall funnel number. The anomaly had been hiding in the aggregate for at least three months.
+The bleeding is happening in two places: the payment info step (40% drop) and between order review and confirmation (32% drop). But nobody had been looking at granular data — only the overall funnel number. The anomaly had been hiding in the aggregate for a long time.
 
 Annualized, the revenue gap between their actual conversion rate (32%) and a reasonable benchmark for their category (52%) is approximately **$2.1M**.
 
 ---
 
-## Week 2: The session recordings
+## Monday Afternoon: The session recordings
 
-Maya pulls a sample of 50 session recordings from users who dropped at the payment step. What she sees:
+Maya pulls a sample of 50 session recordings from PostHog where users dropped at the payment step. What she sees:
 
 - Users who reach the payment page on **mobile** abandon at 58% — almost double the desktop rate of 31%
 - A repeating pattern: user fills in card number, hits tab to move to expiration date field... and the keyboard *shifts* on mobile. The expiration field is now behind the keyboard. Some users scroll. Most don't.
@@ -74,40 +76,38 @@ The UX is leaking users like a colander, but the bleeding isn't random — it's 
 
 ---
 
-## Week 2: Support tickets tell a different story
+## Monday evening: Support tickets tell a different story
 
-Meanwhile, the head of customer support forwards Maya a Slack message:
+After going to the gym to clear her head Maya pulls the support ticket data. 
 
-*"We're getting a lot of 'my order didn't go through' tickets. But when I look them up in the system, the orders DID go through — they just didn't get a confirmation email. People are double-ordering. This is a mess."*
-
-Maya pulls the support ticket data. In the last 60 days:
+In the last 60 days:
 
 - **214 tickets** tagged "order not received / no confirmation"
 - Of those, **167 were orders that actually processed** — the confirmation email failed silently
 - **47 were genuine order failures** — mostly due to card decline with a confusing error message ("Transaction could not be completed. Please try again." — no reason given)
-- The double-order problem has caused 23 refund requests totaling $4,100 in refunded revenue this quarter
+- The double-order problem has caused 97 refund requests totaling $15,124 in refunded revenue this quarter
 
-The checkout abandonment problem has a twin: a silent confirmation failure that's eroding trust and customer support capacity at the same time.
+The checkout abandonment problem has another layer: a silent confirmation failure that's eroding trust and draining customer support capacity at the same time.
 
 ---
 
-## Week 3: The team meeting
+## Tuesday morning: The team meeting
 
-Maya calls a cross-functional meeting. In the room: herself, the head of engineering (Priya), a product designer (Cam), the growth analyst (Darius), and the head of support (Lena).
+Maya calls a cross-functional meeting. In the room: herself, the head of engineering (Priya), a product designer (Cam), the user analyst (Darius), and the head of support (Lena).
 
 What follows is 47 minutes of productive chaos. Everyone has a theory:
 
-- **Priya (Engineering):** "The payment processor we switched to six months ago has stricter validation. The error messages it returns are opaque — we just pass them through as-is."
-- **Cam (Design):** "The form is broken on mobile. I've been saying this for two quarters. The expiration field jumps behind the keyboard. I even filed a ticket."
+- **Priya (Engineering):** "The payment processor we switched to six months ago has stricter validation. The error messages it returns are opaque — we don't transform them at all, just pass them through to the front-end as-is."
+- **Cam (Design):** "The form is broken on mobile. I've been saying this for 4 months. The expiration field jumps behind the keyboard. I even filed a ticket."
 - **Darius (Analytics):** "The drop rate correlates with device type AND with cart value. Carts over $150 abandon at higher rates. People are hesitating on big purchases."
-- **Lena (Support):** "The confirmation email is the real fire. We're handling 30+ tickets a week from people who are confused about whether they even have an order."
-- **Maya (PM):** *[writing everything down, trying not to visibly panic about the $2.1M number]*
+- **Lena (Support):** "The confirmation email is the real fire. We're handling 40+ tickets a week from people who are confused about whether they even have an order."
+- **Maya (PM):** *[writing everything down, trying not to visibly panic about the lost revenue and the multiple problems identified]*
 
 The meeting ends without consensus on root cause or priority. Everyone is right about something. Nobody can agree on what to fix first.
 
 ---
 
-## Week 3: The customer interviews
+## Wednesday: The customer interviews
 
 Maya does five quick customer interviews with people who abandoned checkout in the last 30 days (recruited via a support follow-up email). Key quotes:
 
@@ -125,17 +125,17 @@ Maya does five quick customer interviews with people who abandoned checkout in t
 
 ## The problem, properly stated
 
-After three weeks of data, recordings, tickets, and interviews, here's what Terracart actually knows:
+After three days of digging in data, back and forth in meetings, reviewing recordings, analyzing tickets, and conducting interviews, here's what Maya and Terracart actually knows:
 
 **There are three distinct failure modes in the checkout experience:**
 
 1. **Mobile form UX failure** — The payment form is broken on mobile, causing 58% abandonment at the payment step for mobile users (vs. 31% on desktop). Root cause: keyboard occlusion on the expiration field, no scroll-lock compensation.
 
-2. **Error messaging failure** — Payment errors are returned verbatim from the processor with no human-readable explanation, causing confusion and permanent abandonment. Some users believe they've been charged when they haven't (and some actually have been charged in edge cases).
+2. **Error messaging failure** — Payment errors are returned verbatim from the processor with no human-readable explanation, causing confusion and permanent cart abandonment. Some users believe they've been charged when they haven't (and some actually have been charged in edge cases).
 
-3. **Confirmation email failure** — 78% of "order not received" tickets are orders that processed successfully but didn't trigger a confirmation email. This is a silent trust killer that inflates support volume and causes double-orders.
+3. **Confirmation email failure** — 78% of "order not received" tickets are orders that processed successfully but didn't trigger a confirmation email. This is a silent trust killer that inflates support volume and causes double-orders (and cancellations/refunds).
 
-**The big, messy insight:** These feel like three separate bugs. They're not. They're three symptoms of the same root cause — the checkout experience was never stress-tested as a system. It was built feature by feature, tested on desktop Chrome, and shipped. The seams are showing.
+**The big, messy insight:** These feel like three separate conditions. But they're not. They're three symptoms of the same root cause — the checkout experience was never stress-tested end to end as a system. It was built in silos feature by feature, tested only on Chrome desktop, and shipped. The seams are showing.
 
 ---
 
@@ -147,18 +147,10 @@ The product team now has to answer five questions:
 2. What's the right framing for the PRD — one document covering all three, or three separate workstreams?
 3. How do we prioritize given engineering capacity is already at 80% for the quarter?
 4. What does success look like, and how do we measure it?
-5. How do we tell the story to the exec team without making it sound like the product has been broken for three months? (Because it has.)
+5. How do we tell the story to the exec team without making it sound like the product has been broken for six months or more? (Because it has.)
 
 *This is where you come in.*
 
 ---
-
-## Why this problem is a perfect workshop case
-
-- It has **messy inputs** (meeting notes where everyone disagrees)
-- It has **customer evidence** (interview quotes, support tickets)
-- It has **quantified impact** ($2.1M) but also **ambiguity** (three root causes, unclear priority)
-- It needs **multiple artifacts** (PRD, exec brief, engineering handoff, Slack update)
-- It has **real PM tension** (what do you fix first when everything is on fire?)
 
 Every exercise in this workshop uses Terracart's checkout problem as its source of truth. By the end, you'll have built a complete PM artifact stack — from raw discovery to stakeholder communication — using AI as your co-pilot.
