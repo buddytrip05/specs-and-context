@@ -45,9 +45,9 @@ trust signals: we have a security badge on the form but Darius ran an eye-tracki
 Darius was pretty confident the confirmation email problem is a separate issue that's inflating the support ticket numbers. Lena disagreed.
 
 **Lena:**
-support is getting crushed. 30+ tickets per week on "order not received" — 78% of those are orders that actually went through fine, the confirmation email just silently failed. her team is having to manually look up orders in the system and reassure people. 
+support is getting crushed. 40+ tickets per week on "order not received" — 78% of those are orders that actually went through fine, the confirmation email just silently failed. her team is having to manually look up orders in the system and reassure people. 
 
-she's also seeing double-orders: people who didn't get a confirmation email, assumed the order failed, placed it again. she had a spreadsheet, we didn't have time to look at it but she said there have been at least 23 duplicate refund requests this quarter.
+she's also seeing double-orders: people who didn't get a confirmation email, assumed the order failed, placed it again. she had a spreadsheet, we didn't have time to look at it but she said there have been at least 60 duplicate refund requests this quarter.
 
 there was a tense moment where Lena said "if this were customer service software, this would be a sev-1" and Priya said "we're triaging across the whole product, not just checkout." it didn't escalate but the energy shifted.
 
