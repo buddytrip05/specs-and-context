@@ -5,28 +5,41 @@
 
 ## The company
 
-**Terracart** is a mid-market e-commerce platform for specialty outdoor goods — camping gear, hiking apparel, gardening tools. Founded in 2019. About 280 employees. Growing fast but burning cash. The board just asked the CEO a pointed question about unit economics.
+**Terracart** is a mid-market e-commerce platform for specialty outdoor goods - think like the Target version of REI — camping gear, hiking apparel, gardening tools. Founded in 2019. About 280 employees. Growing but burning cash. The board just asked the CEO a pointed question about unit economics.
 
-The product team is a team of six: two senior PMs, two associate PMs, a head of design, and a growth analyst. Everyone is stretched thin. Everyone has opinions.
+The product team is a team of six: one CPO, one senior PM, two associate PMs, a senior designer, and a user research analyst. Everyone is stretched thin. Everyone has opinions.
 
 ---
 
 ## Week 1: The anomaly in the dashboard
 
-On a Tuesday morning in Q2, Maya Okonkwo — senior PM, owns the checkout experience — is doing her weekly ritual of staring at the funnel dashboard over coffee.
+Maya's Monday morning ritual is fifteen minutes with coffee and the growth dashboard. She's done it every week for two years. The dashboard shows the same six numbers it always shows: sessions, product page views, cart adds, checkout starts, purchases, revenue. 
 
-She's seen these numbers a hundred times. Visitors to product page. Product page to cart. Cart to checkout. Checkout to purchase.
+All trending in the right direction. Green arrows, mostly.
 
-That last number stops her.
+The checkout-to-purchase rate sits at 32%. It has sat at 32% — give or take a point — for as long as Maya can remember. She has never flagged it. Neither has anyone else. It is, as far as anyone on the team is concerned, just what the number is.
 
-> **Cart → checkout:** 84%  
-> **Checkout → purchase:** 32%
+What changes on this particular Monday is not the data. It's Maya's frame of reference.
 
-She blinks. She refreshes. Still 32%.
+Last week, she was at an industry meetup. Talking to a PM at a comparable B2C brand — similar price points, similar customer profile. Not a direct competitor, just a peer. The conversation drifted to metrics, the way those conversations do, and the other PM mentioned their checkout conversion rate almost in passing: "We just cracked 54%, which felt like a big deal after being stuck in the high 40s for two years."
 
-The cart-to-checkout rate is healthy — people *want* to buy. But then something happens between the checkout page and the confirmation page that kills 68% of transactions.
+Maya smiled and moved on. But the number stuck.
 
-She Slacks the growth analyst: *"Hey, pull the checkout funnel for me broken down by step. Something's wrong."*
+She pulls up the dashboard on Monday and stares at 32% with new eyes. Not "this is our number." For the first time: "Is this number okay?"
+
+She doesn't know the answer. And the dashboard can't tell her — it has no benchmark, no industry comparison, no red line. It just shows the number.
+
+She opens a new tab and spends twenty minutes reading about e-commerce checkout conversion benchmarks. Specialty retail, outdoor goods, mid-market. 
+
+The range she finds: 45–58%. The number she has: 32%.
+
+She refreshes her dashboard. Still 32%.
+
+Now she wants to understand where the 32% is coming from. But here's the thing — the dashboard doesn't break down the checkout funnel by step. It shows checkout starts and purchases. The middle is a black box. She has always assumed the drop-off was distributed, a little friction everywhere. She has never actually looked.
+She Slacks her user research analyst: "Hey, can you please pull the checkout funnel for me broken down by step. Like each individual step — shipping, payment, review."
+Darius responds twenty minutes later: "Yeah I can get that. It's not in the standard dashboard — I have to pull it manually from the tables themselves. Give me an hour."
+This is the moment. The step-level data has existed in the analytics platform the entire time. Darius has access to it. It has just never been configured into the standard weekly report, never been asked for, never been looked at. For too long the checkout experience has been bleeding users at the payment step and nobody has seen it because nobody has looked at the right level of the data.
+The data wasn't missing. The context was missing. A benchmark from a casual conversation at a meetup is what finally provided it.
 
 ---
 
