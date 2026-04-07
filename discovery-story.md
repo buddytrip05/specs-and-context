@@ -1,5 +1,5 @@
 # The discovery story
-### How Terracart found the $2.1M/month hole
+### How Terracart found a $2 Mil revenue hole
 
 ---
 
